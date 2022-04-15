@@ -1,0 +1,14 @@
+.feature-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 3rem;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 10rem;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 2rem;
+  }
+}

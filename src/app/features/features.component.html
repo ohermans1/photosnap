@@ -1,0 +1,8 @@
+<app-top-banner [bannerContent]="this.bannerContent"></app-top-banner>
+<app-features-group>
+  <app-feature
+    *ngFor="let feature of featureArray"
+    [feature]="feature"
+  ></app-feature>
+</app-features-group>
+<app-bottom-banner></app-bottom-banner>

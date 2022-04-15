@@ -1,0 +1,52 @@
+<div class="price-modal">
+  <div class="price-modal__toggle">
+    <span
+      class="price-modal__toggle-label"
+      [ngClass]="this.perMonth ? 'price-modal__toggle-label--selected' : ''"
+      >Monthly</span
+    ><input
+      type="checkbox"
+      class="price-modal__toggle-button"
+      (click)="changePrices()"
+    />
+    <span
+      class="price-modal__toggle-label"
+      [ngClass]="!this.perMonth ? 'price-modal__toggle-label--selected' : ''"
+      >Yearly</span
+    >
+  </div>
+  <div class="price-modal__card-group">
+    <div class="price-modal__card">
+      <h2 class="price-modal__header">Basic</h2>
+      <p class="price-modal__paragraph">
+        Includes basic usage of our platform. Recommended for new and aspiring
+        photographers.
+      </p>
+      <span class="price-modal__price">${{ this.prices[0] }}.00</span>
+      <span class="price-modal__frequency">per {{ this.payPeriod }}</span>
+      <button class="price-modal__button">Pick Plan</button>
+    </div>
+    <div class="price-modal__card price-modal__card--pro">
+      <h2 class="price-modal__header">Pro</h2>
+      <p class="price-modal__paragraph">
+        More advanced features available. Recommended for photography veterans
+        and professionals.
+      </p>
+      <span class="price-modal__price">${{ this.prices[1] }}.00</span>
+      <span class="price-modal__frequency">per {{ this.payPeriod }}</span>
+      <button class="price-modal__button price-modal__button--pro">
+        Pick Plan
+      </button>
+    </div>
+    <div class="price-modal__card">
+      <h2 class="price-modal__header">Business</h2>
+      <p class="price-modal__paragraph">
+        Additional features available such as more detailed metrics. Recommended
+        for business owners.
+      </p>
+      <span class="price-modal__price">${{ this.prices[2] }}.00</span>
+      <span class="price-modal__frequency">per {{ this.payPeriod }}</span>
+      <button class="price-modal__button">Pick Plan</button>
+    </div>
+  </div>
+</div>

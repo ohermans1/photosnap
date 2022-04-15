@@ -1,0 +1,45 @@
+.header-banner {
+  &__group {
+    display: flex;
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+  &__text {
+    padding: 0 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    position: relative;
+
+    @media screen and (max-width: 600px) {
+      order: 2;
+      padding: 10rem 5rem;
+      margin-top: -0.1rem;
+    }
+
+    &::after {
+      content: "";
+      height: 40%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background-image: var(--color-accent);
+      width: 1rem;
+      transform: translateY(-50%);
+
+      @media screen and (max-width: 600px) {
+        width: 30%;
+        height: 1rem;
+        top: 0;
+        left: 5rem;
+      }
+    }
+  }
+
+  &__header {
+    margin-bottom: 2rem;
+  }
+}

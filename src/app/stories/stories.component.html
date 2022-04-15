@@ -1,0 +1,7 @@
+<app-gallery>
+  <app-banner class="app-banner"></app-banner>
+  <app-image-card
+    *ngFor="let image of galleryItems"
+    [image]="image"
+  ></app-image-card>
+</app-gallery>

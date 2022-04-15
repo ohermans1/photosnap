@@ -1,0 +1,24 @@
+<header class="header">
+  <a class="header__home" routerLink=""
+    ><img
+      src="../../../../assets/images/shared/desktop/logo.svg"
+      alt="Photosnap Logo"
+      class="header__logo"
+    />
+  </a>
+  <nav
+    class="header__nav"
+    [ngStyle]="{ display: headerOpen ? 'flex' : 'none' }"
+  >
+    <a href="" class="header__link" routerLink="stories">Stories</a>
+    <a href="" class="header__link" routerLink="features">Features</a>
+    <a href="" class="header__link" routerLink="pricing">Pricing</a>
+  </nav>
+  <button
+    class="header__button"
+    [ngStyle]="{ display: headerOpen ? 'block' : 'none' }"
+  >
+    Get an invite
+  </button>
+  <input type="checkbox" class="header__menu" />
+</header>

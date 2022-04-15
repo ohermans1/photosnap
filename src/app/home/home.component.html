@@ -1,0 +1,13 @@
+<app-content></app-content>
+<app-gallery>
+  <app-image-card
+    *ngFor="let image of galleryItems"
+    [image]="image"
+  ></app-image-card>
+</app-gallery>
+<app-features-group>
+  <app-feature
+    *ngFor="let feature of featureArray"
+    [feature]="feature"
+  ></app-feature>
+</app-features-group>

@@ -1,0 +1,139 @@
+.price-modal {
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 8rem 5rem;
+  }
+
+  //Toggle start
+  &__toggle {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__toggle-label {
+    &--selected {
+      font-weight: 700;
+    }
+  }
+
+  &__toggle-button {
+    display: flex;
+    align-items: center;
+    appearance: none;
+    background-color: var(--color-grey);
+    width: 6rem;
+    height: 3rem;
+    border-radius: 50px;
+    position: relative;
+    transition: all 0.3s;
+
+    &::after {
+      content: "";
+      height: 2rem;
+      width: 2rem;
+      background-color: black;
+      border-radius: 50%;
+      position: absolute;
+      margin: 0.5rem;
+      transition: all 0.3s;
+    }
+
+    &:checked {
+      background-color: var(--color-black);
+    }
+
+    &:checked::after {
+      background-color: var(--color-white);
+      transform: translateX(3rem);
+    }
+  }
+  //Toggle finish
+
+  &__button {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-white);
+    padding: 1.3rem 2.3rem;
+    background-color: var(--color-black);
+    border: none;
+    letter-spacing: 2px;
+
+    &:hover {
+      color: var(--color-black);
+      background-color: var(--color-white);
+    }
+
+    &--pro {
+      color: var(--color-black);
+      background-color: var(--color-white);
+
+      &:hover {
+        background-color: var(--color-grey);
+      }
+    }
+  }
+
+  &__card-group {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 3rem;
+    }
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem;
+    background-color: var(--color-grey);
+    height: max-content;
+
+    &--pro {
+      background-color: var(--color-black);
+      color: var(--color-white);
+      padding: 8rem 4rem;
+      position: relative;
+
+      @media screen and (max-width: 768px) {
+        padding: 4rem;
+      }
+
+      &::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: var(--color-accent);
+        height: 1rem;
+      }
+    }
+  }
+  &__header {
+    margin-bottom: 2rem;
+  }
+  &__paragraph {
+    margin-bottom: 3rem;
+  }
+  &__price {
+    font-weight: 700;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  &__frequency {
+    margin-bottom: 3rem;
+  }
+}

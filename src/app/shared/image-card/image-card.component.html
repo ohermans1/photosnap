@@ -1,0 +1,24 @@
+<div
+  class="image-card"
+  routerLink="{{ this.image.imageURL }}"
+  (click)="selectedImage()"
+>
+  <img
+    src="../../../assets/images/stories/desktop/{{ this.image.imageURL }}.jpg"
+    alt=""
+    class="image-card__image"
+  />
+  <div class="image-card__text-group">
+    <p class="image-card__text">{{ this.image.date }}</p>
+    <h3 class="image-card__header">{{ this.image.title }}</h3>
+    <p class="image-card__text">{{ this.image.author }}</p>
+    <hr class="image-card__line" />
+    <a href="" class="image-card__link"
+      >Read Story
+      <img
+        class="image-card__arrow"
+        src="../../../assets/images/shared/desktop/arrow.svg"
+        alt="Right arrow"
+    /></a>
+  </div>
+</div>
